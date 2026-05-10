@@ -1,0 +1,32 @@
+/* estilo.css — estilos base complementarios para Revista Arcana */
+/* Este archivo contiene resets y estilos base que complementan revista.css */
+
+/* ── Reset adicional ── */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; padding: 0; }
+ul { list-style: none; margin: 0; padding: 0; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; font: inherit; border: none; background: none; }
+img { max-width: 100%; display: block; }
+
+/* ── Utilidades ── */
+.container {
+  width: min(calc(100% - 48px), 1200px);
+  margin: 0 auto;
+}
+
+/* ── Scrollbar personalizada ── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #1A2A3A; }
+::-webkit-scrollbar-thumb {
+  background: rgba(240,217,138,0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(240,217,138,0.5); }
+
+/* ── Selection ── */
+::selection {
+  background: rgba(240,217,138,0.3);
+  color: #F0E8D0;
+}

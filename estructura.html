@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Arcana — Revista digital de fantasía. Narrativa, arte y conocimiento sobre mundos imaginarios.">
+  <title>Arcana · Revista de Fantasía</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="stylesheet" href="revista.css">
+  <script src="java.js"></script>
+
+</head>
+<body>
+
+  <!-- ═══ NAVEGACIÓN ═══ -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" onclick="showPage('home')">
+        <img src="ico.png" class="nav-logo-img" alt="Arcana">
+        <span class="nav-logo-text">Arcana</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio" class="nav-link" onclick="showPage('home')">Inicio</a></li>
+        <li><a href="#publicaciones" class="nav-link" onclick="showPage('publicaciones')">Publicaciones</a></li>
+        <li class="nav-dropdown">
+          <a href="#categorias" class="nav-link">Categorías ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#" onclick="showPage('publicaciones','fantasia')">Sobre la fantasía</a></li>
+            <li><a href="#" onclick="showPage('publicaciones','mitologia')">Mitología</a></li>
+            <li><a href="#" onclick="showPage('publicaciones','mundos')">Creación de mundos</a></li>
+            <li><a href="#" onclick="showPage('publicaciones','criaturas')">Criaturas</a></li>
+            <li><a href="#" onclick="showPage('publicaciones','magia')">Sistemas mágicos</a></li>
+            <li><a href="#" onclick="showPage('publicaciones','relatos')">Relatos originales</a></li>
+          </ul>
+        </li>
+        <li><a href="#iniciativas" class="nav-link">Iniciativas</a></li>
+        <li><a href="#quienes" class="nav-link">Quiénes somos</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="nav-search-btn" id="searchToggle" aria-label="Buscar">⌕</button>
+        <button class="nav-icon-btn" onclick="showPage('config')" aria-label="Configuración">⚙</button>
+        <a href="#" class="btn btn-primary nav-cta" onclick="showPage('suscripciones')">Suscribirse</a>
+      </div>
+      <button class="nav-burger" id="burger" aria-label="Menú">☰</button>
+    </div>
+    <div class="search-bar" id="searchBar">
+      <div class="search-inner">
+        <input type="search" id="searchInput" placeholder="Busca artículos, criaturas, mundos…" autocomplete="off">
+        <button class="search-close" id="searchClose">✕</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════
+       PÁGINA: HOME
+  ═══════════════════════════════ -->
+  <div id="page-home" class="page active">
+
+    <!-- HERO -->
+    <section class="hero-main" id="inicio">
+      <div class="hero-bg">
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-particles" id="particles"></div>
+      </div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">✦ &nbsp;Revista Digital de Fantasía &nbsp;✦</p>
+        <h1 class="hero-title">
+          <span class="hero-title-line">Mundos</span>
+          <span class="hero-title-line hero-title-accent">sin límites</span>
+        </h1>
+        <p class="hero-subtitle">Narrativa, arte y conocimiento sobre mundos imaginarios.<br>Donde los lectores se convierten en creadores.</p>
+        <div class="hero-cta-group">
+          <a href="#" class="btn btn-primary" onclick="showPage('publicaciones')">Explorar la revista</a>
+          <a href="#quienes" class="btn btn-ghost">Conocer el proyecto</a>
+        </div>
+      </div>
+      <div class="hero-scroll-hint">
+        <span>Desplázate para explorar</span>
+        <div class="scroll-arrow">↓</div>
+      </div>
+    </section>
+
+        <!-- QUIÉNES SOMOS -->
+    <section class="quienes-section" id="quienes">
+      <div class="container">
+        <div class="quienes-inner">
+          <div class="quienes-text">
+            <div class="section-label"><span>✦</span> Quiénes somos</div>
+            <h2>Un proyecto nacido de la pasión por los mundos imaginarios</h2>
+            <p>Arcana es una revista digital creada desde INNADI Escuela de Diseño con el objetivo de explorar la fantasía como género literario, artístico y cultural. Creemos que imaginar mundos es una forma de entender el nuestro.</p>
+            <p>Nuestro equipo lo forman escritores, ilustradores, diseñadores y lectores apasionados que comparten contenido riguroso y accesible para todos los niveles.</p>
+            <a href="#contacto" class="btn btn-primary-cont">Colaborar con nosotros</a>
+            <a href="https://www.innadi.com/" class="btn btn-primary">Accede a INNADI</a>
+          </div>
+          <div class="quienes-visual">
+            <div class="manifesto-card">
+              <p class="manifesto-quote">"La fantasía no huye de la realidad, sino que la atraviesa para alcanzar una verdad más profunda."</p>
+              <p class="manifesto-author">— C.S. Lewis</p>
+              <div class="manifesto-deco">✦</div>
+            </div>
+            <div class="values-grid">
+              <div class="value-item"><span>🌍</span><strong>Imaginar</strong></div>
+              <div class="value-item"><span>📚</span><strong>Aprender</strong></div>
+              <div class="value-item"><span>✍</span><strong>Crear</strong></div>
+              <div class="value-item"><span>🤝</span><strong>Compartir</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BANNER -->
+    <section class="banner-section">
+      <div class="banner-inner">
+        <div class="banner-text-col">
+          <p class="banner-eyebrow">✦ Edición especial</p>
+          <h2 class="banner-title">El gran atlas<br>de los mundos</h2>
+          <p class="banner-desc">Una colección de mapas, lenguas y leyendas de los universos más ricos de la fantasía contemporánea.</p>
+          <a href="#" class="btn btn-primary" onclick="showPage('articulo')">Leer ahora</a>
+        </div>
+        <div class="banner-visual">
+          <div class="banner-orb"></div>
+          <div class="banner-map-art">
+            <svg viewBox="0 0 320 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="10" width="300" height="240" rx="4" stroke="rgba(240,217,138,0.2)" stroke-width="1"/>
+              <path d="M40 80 Q80 40 140 60 Q200 80 250 50 Q280 40 300 60" stroke="rgba(240,217,138,0.3)" stroke-width="1.5" fill="none"/>
+              <path d="M20 130 Q60 110 100 130 Q160 160 220 120 Q260 100 300 130" stroke="rgba(240,217,138,0.2)" stroke-width="1" fill="none"/>
+              <path d="M60 200 Q120 170 180 200 Q230 220 280 190" stroke="rgba(240,217,138,0.2)" stroke-width="1" fill="none"/>
+              <circle cx="100" cy="90" r="6" fill="rgba(240,217,138,0.4)"/>
+              <circle cx="180" cy="110" r="4" fill="rgba(240,217,138,0.3)"/>
+              <circle cx="240" cy="70" r="5" fill="rgba(240,217,138,0.35)"/>
+              <circle cx="140" cy="180" r="3" fill="rgba(240,217,138,0.25)"/>
+              <text x="96" y="110" font-size="8" fill="rgba(240,217,138,0.5)" font-family="serif">Aethermor</text>
+              <text x="175" y="130" font-size="8" fill="rgba(240,217,138,0.4)" font-family="serif">Vel Karath</text>
+              <text x="230" y="60" font-size="8" fill="rgba(240,217,138,0.45)" font-family="serif">Nirvhas</text>
+              <path d="M30 30 L50 30 M30 30 L30 50" stroke="rgba(240,217,138,0.3)" stroke-width="1"/>
+              <path d="M290 220 L270 220 M290 220 L290 200" stroke="rgba(240,217,138,0.3)" stroke-width="1"/>
+              <circle cx="40" cy="130" r="20" stroke="rgba(240,217,138,0.12)" stroke-width="1" fill="none"/>
+              <line x1="40" y1="110" x2="40" y2="150" stroke="rgba(240,217,138,0.15)" stroke-width="0.8"/>
+              <line x1="20" y1="130" x2="60" y2="130" stroke="rgba(240,217,138,0.15)" stroke-width="0.8"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARTÍCULO DESTACADO (home) -->
+    <section class="featured-wrap" id="publicaciones">
+      <div class="container">
+        <div class="section-label"><span>✦</span> Artículo destacado</div>
+        <article class="featured-article">
+          <div class="featured-img">
+            <div class="featured-img-placeholder">
+              <div class="img-art">
+                <div class="img-art-circle"></div>
+                <div class="img-art-rune">᚛ᚅᚔᚋᚊᚔᚂ᚜</div>
+              </div>
+            </div>
+            <span class="featured-badge">✦ Destacado</span>
+          </div>
+          <div class="featured-body">
+            <div class="featured-meta">
+              <span class="tag">Creación de mundos</span>
+              <span class="meta-sep">·</span>
+              <span class="meta-date">14 Abr 2025</span>
+              <span class="meta-sep">·</span>
+              <span class="meta-time">⏱ 8 min</span>
+            </div>
+            <h2 class="featured-title">El arte del Worldbuilding: cómo construir un mundo que respire</h2>
+            <p class="featured-excerpt">Crear un mundo fantástico va mucho más allá de dibujar un mapa o inventar un nombre. Cada detalle —la economía, el clima, las creencias populares— contribuye a la ilusión de que ese lugar existe más allá de las páginas.</p>
+            <div class="featured-author">
+              <div class="author-avatar">S</div>
+              <div>
+                <strong>Serafina Vrael</strong>
+              </div>
+            </div>
+            <a href="#" class="btn btn-primary" onclick="showPage('articulo')">Leer artículo completo</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CATEGORÍAS GRID -->
+    <section class="cat-section" id="categorias">
+      <div class="container">
+        <div class="section-label"><span>✦</span> Categorías</div>
+        <div class="cat-grid">
+          <a href="#" class="cat-card" onclick="showPage('publicaciones','fantasia')">
+            <div class="cat-icon">⚔</div>
+            <h3>Sobre la fantasía</h3>
+            <p>Ensayos y reflexiones sobre el género</p>
+            <span class="cat-count">12 artículos</span>
+          </a>
+          <a href="#" class="cat-card" onclick="showPage('publicaciones','mitologia')">
+            <div class="cat-icon">🌙</div>
+            <h3>Mitología</h3>
+            <p>Mitos, leyendas y su influencia creativa</p>
+            <span class="cat-count">8 artículos</span>
+          </a>
+          <a href="#" class="cat-card" onclick="showPage('publicaciones','mundos')">
+            <div class="cat-icon">🌍</div>
+            <h3>Creación de mundos</h3>
+            <p>Técnicas y teoría del worldbuilding</p>
+            <span class="cat-count">15 artículos</span>
+          </a>
+          <a href="#" class="cat-card" onclick="showPage('publicaciones','criaturas')">
+            <div class="cat-icon">🐉</div>
+            <h3>Criaturas</h3>
+            <p>Bestiarios y anatomía de lo fantástico</p>
+            <span class="cat-count">10 artículos</span>
+          </a>
+          <a href="#" class="cat-card" onclick="showPage('publicaciones','magia')">
+            <div class="cat-icon">✨</div>
+            <h3>Sistemas mágicos</h3>
+            <p>Diseño y coherencia de la magia</p>
+            <span class="cat-count">9 artículos</span>
+          </a>
+          <a href="#" class="cat-card" onclick="showPage('publicaciones','relatos')">
+            <div class="cat-icon">📜</div>
+            <h3>Relatos originales</h3>
+            <p>Ficción breve de la comunidad</p>
+            <span class="cat-count">22 artículos</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INICIATIVAS -->
+    <section class="iniciativas-section" id="iniciativas">
+      <div class="container">
+        <div class="section-label"><span>✦</span> Iniciativas</div>
+        <div class="iniciativas-grid">
+          <article class="iniciativa-card iniciativa-main">
+            <div class="iniciativa-tag">Convocatoria abierta</div>
+            <h3>Antología de Relatos 2025</h3>
+            <p>Envianos tu relato corto de fantasía. Los mejores serán publicados en la antología anual de Arcana, disponible en digital y papel.</p>
+            <div class="iniciativa-meta">
+              <span>📅 Cierre: 30 Jun 2025</span>
+              <span>📝 Hasta 5.000 palabras</span>
+            </div>
+            <a href="#contacto" class="btn btn-primary">Participar</a>
+          </article>
+          <article class="iniciativa-card">
+            <div class="iniciativa-tag">Taller</div>
+            <h3>Worldbuilding en 30 días</h3>
+            <p>Un reto mensual de creación de mundos con prompts diarios y feedback de la comunidad.</p>
+            <a href="#" class="btn btn-ghost">Más información</a>
+          </article>
+          <article class="iniciativa-card">
+            <div class="iniciativa-tag">Comunidad</div>
+            <h3>Club de lectura</h3>
+            <p>Cada mes leemos una obra de fantasía y debatimos en sesiones abiertas para suscriptores.</p>
+            <a href="#" class="btn btn-ghost">Unirse</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contacto-section" id="contacto">
+      <div class="container">
+        <div class="contacto-inner">
+          <div class="contacto-text">
+            <div class="section-label"><span>✦</span> Contacto</div>
+            <h2>Escríbenos</h2>
+            <p>¿Tienes un relato, una propuesta de colaboración, o quieres unirte a la comunidad? Estamos aquí.</p>
+            <div class="contacto-info">
+              <div class="contacto-item"><span>✉</span><span>hola@arcana-revista.es</span></div>
+              <div class="contacto-item"><span>↗</span><span>@arcana_revista</span></div>
+              <div class="contacto-item"><span>⌘</span><span>INNADI Escuela de Diseño</span></div>
+            </div>
+          </div>
+          <form class="contacto-form" id="contactForm">
+            <div class="field">
+              <label for="c-nombre">Nombre</label>
+              <input id="c-nombre" type="text" placeholder="Tu nombre completo" required>
+            </div>
+            <div class="field">
+              <label for="c-email">Correo electrónico</label>
+              <input id="c-email" type="email" placeholder="nombre@dominio.com" required>
+            </div>
+            <div class="field">
+              <label for="c-tipo">¿En qué podemos ayudarte?</label>
+              <select id="c-tipo">
+                <option>Selecciona una opción</option>
+                <option>Propuesta de colaboración</option>
+                <option>Envío de relato</option>
+                <option>Suscripción</option>
+                <option>Otros</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="c-mensaje">Mensaje</label>
+              <textarea id="c-mensaje" rows="4" placeholder="Cuéntanos tu propuesta…" required></textarea>
+            </div>
+            <div class="field-inline">
+              <label class="checkbox-wrap">
+                <input type="checkbox" required>
+                <span>Acepto la política de privacidad</span>
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary form-submit">Enviar mensaje</button>
+            <div class="form-success" id="formSuccess"><span>✓</span> Mensaje enviado. ¡Nos ponemos en contacto pronto!</div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">
+            <img src="ico.png" class="footer-logo-img" alt="">
+            Arcana
+          </div>
+            <p>Revista digital de fantasía. Narrativa, arte y conocimiento sobre mundos imaginarios.</p>
+            <p class="footer-innadi">Un proyecto de <strong> <a href="https://www.innadi.com/">INNADI · Escuela de Diseño</a></strong></p>
+          </div>
+          <div class="footer-col">
+            <h4>Contenido</h4>
+            <ul>
+              <li><a href="#" onclick="showPage('publicaciones')">Últimas publicaciones</a></li>
+              <li><a href="#" onclick="showPage('publicaciones','fantasia')">Sobre la fantasía</a></li>
+              <li><a href="#" onclick="showPage('publicaciones','mitologia')">Mitología</a></li>
+              <li><a href="#" onclick="showPage('publicaciones','mundos')">Creación de mundos</a></li>
+              <li><a href="#" onclick="showPage('publicaciones','criaturas')">Criaturas</a></li>
+              <li><a href="#" onclick="showPage('publicaciones','relatos')">Relatos originales</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Comunidad</h4>
+            <ul>
+              <li><a href="#iniciativas">Iniciativas</a></li>
+              <li><a href="#" onclick="showPage('suscripciones')">Suscripciones</a></li>
+              <li><a href="#contacto">Colaborar</a></li>
+              <li><a href="#quienes">Quiénes somos</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Newsletter</h4>
+            <p>Recibe los mejores artículos cada dos semanas.</p>
+            <div class="footer-newsletter">
+              <input type="email" placeholder="tu@email.com" class="footer-email-input">
+              <button class="btn btn-primary footer-subscribe">→</button>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2025 Arcana · Revista de Fantasía · Proyecto INNADI</p>
+          <div class="footer-links">
+            <a href="#">Política de privacidad</a>
+            <span>·</span>
+            <a href="#">Aviso legal</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- /page-home -->
+
+
+  <!-- ═══════════════════════════════
+       PÁGINA: PUBLICACIONES
+  ═══════════════════════════════ -->
+  <div id="page-publicaciones" class="page">
+    <div class="subpage-hero">
+      <div class="container">
+        <p class="hero-eyebrow">✦ Publicaciones</p>
+        <h1 class="subpage-title" id="pubPageTitle">Todas las publicaciones</h1>
+        <p class="subpage-subtitle" id="pubPageSub">Explora nuestra biblioteca de artículos por categoría</p>
+      </div>
+    </div>
+
+    <div class="container pub-layout">
+      <!-- Sidebar categorías -->
+      <aside class="pub-sidebar">
+        <div class="sidebar-label">Categorías</div>
+        <nav class="sidebar-nav">
+          <button class="sidebar-btn active" data-cat="todos" onclick="filterPub('todos',this)">
+            <span class="sidebar-btn-icon">✦</span> Todos
+            <span class="sidebar-count">76</span>
+          </button>
+          <button class="sidebar-btn" data-cat="fantasia" onclick="filterPub('fantasia',this)">
+            <span class="sidebar-btn-icon">⚔</span> Sobre la fantasía
+            <span class="sidebar-count">12</span>
+          </button>
+          <button class="sidebar-btn" data-cat="mitologia" onclick="filterPub('mitologia',this)">
+            <span class="sidebar-btn-icon">🌙</span> Mitología
+            <span class="sidebar-count">8</span>
+          </button>
+          <button class="sidebar-btn" data-cat="mundos" onclick="filterPub('mundos',this)">
+            <span class="sidebar-btn-icon">🌍</span> Creación de mundos
+            <span class="sidebar-count">15</span>
+          </button>
+          <button class="sidebar-btn" data-cat="criaturas" onclick="filterPub('criaturas',this)">
+            <span class="sidebar-btn-icon">🐉</span> Criaturas
+            <span class="sidebar-count">10</span>
+          </button>
+          <button class="sidebar-btn" data-cat="magia" onclick="filterPub('magia',this)">
+            <span class="sidebar-btn-icon">✨</span> Sistemas mágicos
+            <span class="sidebar-count">9</span>
+          </button>
+          <button class="sidebar-btn" data-cat="relatos" onclick="filterPub('relatos',this)">
+            <span class="sidebar-btn-icon">📜</span> Relatos originales
+            <span class="sidebar-count">22</span>
+          </button>
+        </nav>
+        <div class="sidebar-divider"></div>
+        <div class="sidebar-label">Ordenar por</div>
+        <div class="sidebar-sort">
+          <button class="sort-btn active">Más recientes</button>
+          <button class="sort-btn">Más leídos</button>
+          <button class="sort-btn">Lectura corta</button>
+        </div>
+      </aside>
+
+      <!-- Grid de artículos -->
+      <main class="pub-main">
+        <div class="pub-top-bar">
+          <span class="pub-count" id="pubCount">76 artículos</span>
+          <div class="pub-view-toggle">
+            <button class="view-btn active" data-view="grid" onclick="setPubView('grid',this)">⊞</button>
+            <button class="view-btn" data-view="list" onclick="setPubView('list',this)">☰</button>
+          </div>
+        </div>
+
+        <div class="articles-grid pub-grid" id="pubGrid">
+
+          <article class="article-card" data-cat="criaturas" onclick="showPage('articulo')">
+            <div class="article-img">
+              <div class="article-img-art art-dragon">
+                <svg viewBox="0 0 120 120" fill="none"><circle cx="60" cy="60" r="55" stroke="rgba(240,217,138,0.15)" stroke-width="1"/><path d="M60 20 L80 50 L70 55 L90 80 L60 70 L30 80 L50 55 L40 50 Z" stroke="#F0D98A" stroke-width="1.5" fill="rgba(240,217,138,0.05)"/><circle cx="50" cy="45" r="3" fill="#F0D98A" opacity="0.6"/><circle cx="70" cy="45" r="3" fill="#F0D98A" opacity="0.6"/></svg>
+              </div>
+            </div>
+            <div class="article-body">
+              <div class="article-meta"><span class="tag">Criaturas</span><span class="meta-date">10 Abr 2025</span></div>
+              <h3 class="article-title">Dragones: anatomía de una leyenda universal</h3>
+              <p class="article-excerpt">Desde Fafnir hasta Smaug, los dragones comparten una presencia simbólica en culturas que nunca se conocieron.</p>
+              <div class="article-footer"><div class="author-mini"><div class="author-dot">M</div><span>M. Thalindor</span></div><div class="read-info">⏱ 6 min</div></div>
+            </div>
+          </article>
+
+          <article class="article-card" data-cat="magia" onclick="showPage('articulo')">
+            <div class="article-img">
+              <div class="article-img-art art-magic">
+                <svg viewBox="0 0 120 120" fill="none"><circle cx="60" cy="60" r="55" stroke="rgba(240,217,138,0.15)" stroke-width="1"/><polygon points="60,15 70,45 100,45 77,63 86,93 60,75 34,93 43,63 20,45 50,45" stroke="#F0D98A" stroke-width="1.2" fill="rgba(240,217,138,0.04)"/></svg>
+              </div>
+            </div>
+            <div class="article-body">
+              <div class="article-meta"><span class="tag">Magia</span><span class="meta-date">5 Abr 2025</span></div>
+              <h3 class="article-title">Las reglas de la magia: cuando lo imposible tiene lógica</h3>
+              <p class="article-excerpt">Sanderson, Le Guin y Tolkien: tres filosofías del sistema mágico que cambiaron la fantasía moderna.</p>
+              <div class="article-footer"><div class="author-mini"><div class="author-dot">D</div><span>D. Kessvel</span></div><div class="read-info">⏱ 9 min</div></div>
+            </div>
+          </article>
+
+          <article class="article-card" data-cat="mundos" onclick="showPage('articulo')">
+            <div class="article-img">
+              <div class="article-img-art">
+                <svg viewBox="0 0 120 120" fill="none"><circle cx="60" cy="60" r="55" stroke="rgba(240,217,138,0.15)" stroke-width="1"/><circle cx="60" cy="60" r="30" stroke="#F0D98A" stroke-width="1" fill="none" opacity="0.5"/><path d="M30 60 Q60 40 90 60" stroke="#F0D98A" stroke-width="1" fill="none" opacity="0.4"/><path d="M30 60 Q60 80 90 60" stroke="#F0D98A" stroke-width="1" fill="none" opacity="0.4"/></svg>
+              </div>
+            </div>
+            <div class="article-body">
+              <div class="article-meta"><span class="tag">Mundos</span><span class="meta-date">2 Abr 2025</span></div>
+              <h3 class="article-title">Cartografía fantástica: mapear lo que no existe</h3>
+              <p class="article-excerpt">Un mapa bien diseñado no solo orienta al lector; define el ritmo de la aventura y revela la historia del mundo.</p>
+              <div class="article-footer"><div class="author-mini"><div class="author-dot">I</div><span>I. Sunveth</span></div><div class="read-info">⏱ 7 min</div></div>
+            </div>
+          </article>
+
+          <article class="article-card" data-cat="mitologia" onclick="showPage('articulo')">
+            <div class="article-img">
+              <div class="article-img-art">
+                <svg viewBox="0 0 120 120" fill="none"><circle cx="60" cy="60" r="55" stroke="rgba(240,217,138,0.15)" stroke-width="1"/><path d="M60 15 L60 105 M15 60 L105 60" stroke="#F0D98A" stroke-width="0.8" opacity="0.3"/><circle cx="60" cy="60" r="20" stroke="#F0D98A" stroke-width="1.2" fill="none" opacity="0.5"/><path d="M45 45 L75 75 M75 45 L45 75" stroke="#F0D98A" stroke-width="0.8" opacity="0.3"/></svg>
+              </div>
+            </div>
+            <div class="article-body">
+              <div class="article-meta"><span class="tag">Mitología</span><span class="meta-date">28 Mar 2025</span></div>
+              <h3 class="article-title">Los héroes caídos: arquetipos que perduran</h3>
+              <p class="article-excerpt">Aquiles, Sigfrido, Beowulf. Qué tienen en común estos héroes y por qué seguimos recreándolos hoy.</p>
+              <div class="article-footer"><div class="author-mini"><div class="author-dot">C</div><span>C. Orvane</span></div><div class="read-info">⏱ 11 min</div></div>
+            </div>
+          </article>
+
+          <article class="article-card" data-cat="fantasia" onclick="showPage('articulo')">
+            <div class="article-img">
+              <div class="article-img-art">
+                <svg viewBox="0 0 120 120" fill="none"><circle cx="60" cy="60" r="55" stroke="rgba(240,217,138,0.15)" stroke-width="1"/><rect x="35" y="35" width="50" height="50" rx="3" stroke="#F0D98A" stroke-width="1" fill="rgba(240,217,138,0.04)"/><line x1="35" y1="50" x2="85" y2="50" stroke="#F0D98A" stroke-width="0.8" opacity="0.4"/><line x1="35" y1="65" x2="85" y2="65" stroke="#F0D98A" stroke-width="0.8" opacity="0.4"/><line x1="35" y1="78" x2="65" y2="78" stroke="#F0D98A" stroke-width="0.8" opacity="0.4"/></svg>
+              </div>
+            </div>
+            <div class="article-body">
+              <div class="article-meta"><span class="tag">Fantasía</span><span class="meta-date">21 Mar 2025</span></div>
+              <h3 class="article-title">¿Qué hace grande a un libro de fantasía?</h3>
+              <p class="article-excerpt">Más allá de la magia y los dragones, los mejores libros del género comparten algo que va mucho más allá de la trama.</p>
+              <div class="article-footer"><div class="author-mini"><div class="author-dot">S</div><span>S. Vrael</span></div><div class="read-info">⏱ 5 min</div></div>
+            </div>
+          </article>
+
+          <article class="article-card" data-cat="relatos" onclick="showPage('articulo')">
+            <div class="article-img">
+              <div class="article-img-art">
+                <svg viewBox="0 0 120 120" fill="none"><circle cx="60" cy="60" r="55" stroke="rgba(240,217,138,0.15)" stroke-width="1"/><path d="M40 30 Q60 20 80 30 L85 90 Q60 100 35 90 Z" stroke="#F0D98A" stroke-width="1" fill="rgba(240,217,138,0.04)"/><line x1="48" y1="50" x2="72" y2="50" stroke="#F0D98A" stroke-width="0.8" opacity="0.5"/><line x1="48" y1="60" x2="72" y2="60" stroke="#F0D98A" stroke-width="0.8" opacity="0.5"/><line x1="48" y1="70" x2="62" y2="70" stroke="#F0D98A" stroke-width="0.8" opacity="0.5"/></svg>
+              </div>
+            </div>
+            <div class="article-body">
+              <div class="article-meta"><span class="tag">Relatos</span><span class="meta-date">15 Mar 2025</span></div>
+              <h3 class="article-title">La última lluvia de Iselth</h3>
+              <p class="article-excerpt">Cuando el dios del agua cerró los ojos por última vez, Iselth comprendió que tendría que aprender a llorar por sí sola.</p>
+              <div class="article-footer"><div class="author-mini"><div class="author-dot">E</div><span>E. Farryn</span></div><div class="read-info">⏱ 4 min</div></div>
+            </div>
+          </article>
+
+        </div><!-- /pub-grid -->
+
+        <div class="pagination">
+          <button class="page-btn active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <span class="page-sep">…</span>
+          <button class="page-btn">8</button>
+          <button class="page-btn page-next">Siguiente →</button>
+        </div>
+      </main>
+    </div>
+  </div><!-- /page-publicaciones -->
+
+
+  <!-- ═══════════════════════════════
+       PÁGINA: ARTÍCULO DESTACADO
+  ═══════════════════════════════ -->
+  <div id="page-articulo" class="page">
+    <div class="articulo-hero">
+      <div class="container">
+        <div class="articulo-breadcrumb">
+          <button onclick="showPage('home')">Inicio</button>
+          <span>›</span>
+          <button onclick="showPage('publicaciones','mundos')">Creación de mundos</button>
+          <span>›</span>
+          <span>Artículo</span>
+        </div>
+        <span class="tag" style="margin-bottom: 20px; display: inline-flex;">Creación de mundos</span>
+        <h1 class="articulo-titulo">El arte del Worldbuilding: cómo construir un mundo que respire</h1>
+        <div class="articulo-meta-bar">
+          <div class="articulo-author-info">
+            <div class="author-avatar">S</div>
+            <div>
+              <strong>Serafina Vrael</strong>
+              <span>Editora fundadora · 14 Abr 2025</span>
+            </div>
+          </div>
+          <div class="articulo-stats">
+            <span>⏱ 8 min de lectura</span>
+            <span>·</span>
+            <span>👁 2.4k lecturas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container articulo-layout">
+      <article class="articulo-body">
+        <div class="articulo-cover-img">
+          <div class="img-art" style="opacity:0.5; transform: scale(1.5);">
+            <div class="img-art-circle"></div>
+          </div>
+        </div>
+
+        <div class="articulo-content">
+          <p class="articulo-lead">Crear un mundo fantástico va mucho más allá de dibujar un mapa o inventar un nombre. Cada detalle —la economía, el clima, las creencias populares— contribuye a la ilusión de que ese lugar existe más allá de las páginas.</p>
+
+          <h2>El primer error del worldbuilder</h2>
+          <p>La mayoría de creadores noveles empiezan por lo visible: el nombre del reino, el aspecto de la capital, el sistema de magia. Sin embargo, los mundos que perduran en la memoria del lector son aquellos que tienen raíces invisibles. ¿Por qué ese reino lleva ese nombre? ¿Quién construyó la capital y con qué materiales disponía? ¿Qué consecuencias tiene la magia en la economía cotidiana?</p>
+
+          <blockquote class="articulo-quote">
+            <p>"La historia visible es solo la punta del iceberg. Todo lo que el lector nunca verá es lo que mantiene el mundo a flote."</p>
+            <cite>— Ursula K. Le Guin</cite>
+          </blockquote>
+
+          <h2>Los cuatro pilares del worldbuilding coherente</h2>
+          <p>Existen cuatro dimensiones que todo mundo bien construido debe resolver, aunque el lector nunca las perciba directamente:</p>
+
+          <div class="articulo-pillars">
+            <div class="pillar-card">
+              <span class="pillar-num">01</span>
+              <h4>Geografía y clima</h4>
+              <p>El terreno condiciona la cultura, la economía y los conflictos. Un desierto no produce el mismo tipo de civilización que un delta fluvial.</p>
+            </div>
+            <div class="pillar-card">
+              <span class="pillar-num">02</span>
+              <h4>Historia y mitología</h4>
+              <p>Todo mundo tiene una historia que lo precede. Esa historia se filtra en los nombres, las supersticiones, los monumentos en ruinas.</p>
+            </div>
+            <div class="pillar-card">
+              <span class="pillar-num">03</span>
+              <h4>Economía y política</h4>
+              <p>¿De qué vive la gente? ¿Quién tiene el poder y por qué? Estas preguntas generan conflictos naturales y plausibles.</p>
+            </div>
+            <div class="pillar-card">
+              <span class="pillar-num">04</span>
+              <h4>Creencias y valores</h4>
+              <p>La religión, la ética y los tabúes definen qué considera sagrado o prohibido esa sociedad.</p>
+            </div>
+          </div>
+
+          <h2>Cuánto mostrar y cuánto esconder</h2>
+          <p>Uno de los errores más comunes es el llamado "síndrome de la enciclopedia": el autor ha construido tanto que no puede resistir la tentación de contarlo todo. El resultado es que la narrativa se detiene para dar paso a largas descripciones que el lector suele saltarse.</p>
+          <p>La regla de oro: construye el iceberg completo, pero solo muestra la punta. El lector percibirá la solidez de lo que hay debajo sin necesidad de verlo.</p>
+        </div>
+
+        <div class="articulo-tags-bar">
+          <span class="tag">Worldbuilding</span>
+          <span class="tag">Narrativa</span>
+          <span class="tag">Técnica</span>
+          <span class="tag">Fantasía</span>
+        </div>
+
+        <div class="articulo-nav">
+          <button class="articulo-nav-btn" onclick="showPage('publicaciones')">← Volver a publicaciones</button>
+          <button class="articulo-nav-btn" onclick="showPage('articulo')">Siguiente artículo →</button>
+        </div>
+      </article>
+
+      <!-- Sidebar del artículo -->
+      <aside class="articulo-sidebar">
+        <div class="art-sidebar-card">
+          <div class="sidebar-label">Sobre la autora</div>
+          <div class="art-author-card">
+            <div class="author-avatar" style="width:56px;height:56px;font-size:1.3rem;">L</div>
+            <div>
+              <strong>Serafina Vrael</strong>
+              <p>Editora fundadora de Arcana. Especialista en literatura fantástica y worldbuilding.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="art-sidebar-card">
+          <div class="sidebar-label">Artículos relacionados</div>
+          <div class="related-list">
+            <a href="#" class="related-item" onclick="showPage('articulo')">
+              <span class="tag" style="font-size:0.65rem">Mundos</span>
+              <p>Cartografía fantástica: mapear lo que no existe</p>
+            </a>
+            <a href="#" class="related-item" onclick="showPage('articulo')">
+              <span class="tag" style="font-size:0.65rem">Magia</span>
+              <p>Las reglas de la magia: cuando lo imposible tiene lógica</p>
+            </a>
+            <a href="#" class="related-item" onclick="showPage('articulo')">
+              <span class="tag" style="font-size:0.65rem">Mitología</span>
+              <p>Los héroes caídos: arquetipos que perduran</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="art-sidebar-card art-subscribe-card">
+          <p class="sidebar-label">Boletín de Arcana</p>
+          <p style="font-size:0.88rem; color: var(--color-text-soft); margin: 0 0 16px;">Recibe los mejores artículos cada dos semanas.</p>
+          <input type="email" placeholder="tu@email.com" style="margin-bottom:10px">
+          <button class="btn btn-primary" style="width:100%; justify-content: center;" onclick="showPage('suscripciones')">Suscribirse</button>
+        </div>
+      </aside>
+    </div>
+  </div><!-- /page-articulo -->
+
+
+  <!-- ═══════════════════════════════
+       PÁGINA: SUSCRIPCIONES
+  ═══════════════════════════════ -->
+  <div id="page-suscripciones" class="page">
+    <div class="subpage-hero">
+      <div class="container">
+        <p class="hero-eyebrow">✦ Comunidad</p>
+        <h1 class="subpage-title">Suscripciones y alertas</h1>
+        <p class="subpage-subtitle">Personaliza qué contenido recibes y cuándo</p>
+      </div>
+    </div>
+
+    <div class="container subs-layout">
+
+      <!-- A. Suscripción a autores -->
+      <section class="subs-section">
+        <div class="subs-section-header">
+          <div class="subs-section-icon">👤</div>
+          <div>
+            <h2>Autores que sigues</h2>
+            <p>Recibe notificaciones cuando publiquen nuevo contenido</p>
+          </div>
+        </div>
+        <div class="authors-grid">
+          <div class="author-sub-card subscribed">
+            <div class="author-avatar" style="width:52px;height:52px;font-size:1.2rem;">L</div>
+            <div class="author-sub-info">
+              <strong>Serafina Vrael</strong>
+              <span>12 publicaciones · Editora fundadora</span>
+              <div class="author-tags"><span class="mini-tag">Mundos</span><span class="mini-tag">Narrativa</span></div>
+            </div>
+            <button class="sub-toggle subscribed" onclick="toggleSub(this)">✓ Siguiendo</button>
+          </div>
+          <div class="author-sub-card">
+            <div class="author-avatar" style="width:52px;height:52px;font-size:1.2rem;background:var(--color-steel);">M</div>
+            <div class="author-sub-info">
+              <strong>Mireya Thalindor</strong>
+              <span>8 publicaciones · Colaboradora</span>
+              <div class="author-tags"><span class="mini-tag">Criaturas</span><span class="mini-tag">Mitología</span></div>
+            </div>
+            <button class="sub-toggle" onclick="toggleSub(this)">+ Seguir</button>
+          </div>
+          <div class="author-sub-card">
+            <div class="author-avatar" style="width:52px;height:52px;font-size:1.2rem;background:var(--color-abyss);">D</div>
+            <div class="author-sub-info">
+              <strong>Dorian Kessvel</strong>
+              <span>6 publicaciones · Colaborador</span>
+              <div class="author-tags"><span class="mini-tag">Magia</span></div>
+            </div>
+            <button class="sub-toggle" onclick="toggleSub(this)">+ Seguir</button>
+          </div>
+          <div class="author-sub-card">
+            <div class="author-avatar" style="width:52px;height:52px;font-size:1.2rem;background:#3A5A6B;">I</div>
+            <div class="author-sub-info">
+              <strong>Ilara Sunveth</strong>
+              <span>9 publicaciones · Colaboradora</span>
+              <div class="author-tags"><span class="mini-tag">Mundos</span><span class="mini-tag">Cartografía</span></div>
+            </div>
+            <button class="sub-toggle" onclick="toggleSub(this)">+ Seguir</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- B. Suscripción a etiquetas -->
+      <section class="subs-section">
+        <div class="subs-section-header">
+          <div class="subs-section-icon">🏷</div>
+          <div>
+            <h2>Etiquetas que sigues</h2>
+            <p>Te avisamos cuando se publique contenido con estas etiquetas</p>
+          </div>
+        </div>
+        <div class="tags-sub-grid">
+          <button class="tag-sub-btn active" onclick="this.classList.toggle('active')">Worldbuilding</button>
+          <button class="tag-sub-btn active" onclick="this.classList.toggle('active')">Dragones</button>
+          <button class="tag-sub-btn" onclick="this.classList.toggle('active')">Magia blanda</button>
+          <button class="tag-sub-btn" onclick="this.classList.toggle('active')">Mitología nórdica</button>
+          <button class="tag-sub-btn active" onclick="this.classList.toggle('active')">Relato corto</button>
+          <button class="tag-sub-btn" onclick="this.classList.toggle('active')">Tolkien</button>
+          <button class="tag-sub-btn" onclick="this.classList.toggle('active')">Sistemas mágicos</button>
+          <button class="tag-sub-btn" onclick="this.classList.toggle('active')">Cartografía</button>
+          <button class="tag-sub-btn" onclick="this.classList.toggle('active')">Bestiario</button>
+          <button class="tag-sub-btn" onclick="this.classList.toggle('active')">Escritura creativa</button>
+          <button class="tag-sub-btn active" onclick="this.classList.toggle('active')">Reseñas</button>
+          <button class="tag-sub-btn" onclick="this.classList.toggle('active')">Historia medieval</button>
+        </div>
+        <p class="tags-sub-hint">Haz clic para activar o desactivar una etiqueta</p>
+      </section>
+
+      <!-- C. Configuración del newsletter -->
+      <section class="subs-section">
+        <div class="subs-section-header">
+          <div class="subs-section-icon">✉</div>
+          <div>
+            <h2>Boletín de Arcana</h2>
+            <p>Configura la frecuencia y tipo de contenido que recibes</p>
+          </div>
+        </div>
+        <div class="newsletter-config">
+          <div class="newsletter-form-wrap">
+            <div class="field">
+              <label>Tu correo electrónico</label>
+              <input type="email" placeholder="nombre@dominio.com">
+            </div>
+            <div class="field">
+              <label>Frecuencia</label>
+              <div class="freq-options">
+                <label class="freq-option">
+                  <input type="radio" name="freq" value="semanal" checked>
+                  <span class="freq-label">
+                    <strong>Semanal</strong>
+                    <em>Cada lunes, un resumen de lo publicado</em>
+                  </span>
+                </label>
+                <label class="freq-option">
+                  <input type="radio" name="freq" value="quincenal">
+                  <span class="freq-label">
+                    <strong>Quincenal</strong>
+                    <em>Cada dos semanas, selección editorial</em>
+                  </span>
+                </label>
+                <label class="freq-option">
+                  <input type="radio" name="freq" value="mensual">
+                  <span class="freq-label">
+                    <strong>Mensual</strong>
+                    <em>Una vez al mes, lo más destacado</em>
+                  </span>
+                </label>
+              </div>
+            </div>
+            <div class="field">
+              <label>Tipos de contenido</label>
+              <div class="content-checks">
+                <label class="checkbox-wrap"><input type="checkbox" checked><span>Artículos de fondo</span></label>
+                <label class="checkbox-wrap"><input type="checkbox" checked><span>Relatos originales</span></label>
+                <label class="checkbox-wrap"><input type="checkbox"><span>Talleres y convocatorias</span></label>
+                <label class="checkbox-wrap"><input type="checkbox" checked><span>Novedades editoriales</span></label>
+              </div>
+            </div>
+            <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="newsletterSuccess(this)">Guardar preferencias</button>
+            <div class="form-success" id="nlSuccess" style="margin-top:12px"><span>✓</span> Preferencias guardadas correctamente</div>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /subs-layout -->
+  </div><!-- /page-suscripciones -->
+
+
+  <!-- ═══════════════════════════════
+       PÁGINA: CONFIGURACIÓN
+  ═══════════════════════════════ -->
+  <div id="page-config" class="page">
+    <div class="subpage-hero">
+      <div class="container">
+        <p class="hero-eyebrow">✦ Cuenta</p>
+        <h1 class="subpage-title">Configuración de usuario</h1>
+        <p class="subpage-subtitle">Gestiona tu perfil y preferencias de lectura</p>
+      </div>
+    </div>
+
+    <div class="container config-layout">
+
+      <!-- Sidebar navegación config -->
+      <aside class="config-sidebar">
+        <button class="config-nav-btn active" onclick="showConfigTab('perfil',this)">👤 Perfil</button>
+        <button class="config-nav-btn" onclick="showConfigTab('lectura',this)">📚 Lectura</button>
+        <button class="config-nav-btn" onclick="showConfigTab('notificaciones',this)">🔔 Notificaciones</button>
+        <button class="config-nav-btn" onclick="showConfigTab('privacidad',this)">🔒 Privacidad</button>
+        <button class="config-nav-btn" onclick="showConfigTab('cuenta',this)">⚙ Cuenta</button>
+      </aside>
+
+      <main class="config-main">
+
+        <!-- Tab: Perfil -->
+        <div id="config-tab-perfil" class="config-tab active">
+          <div class="config-section">
+            <h3 class="config-section-title">Información personal</h3>
+            <div class="profile-avatar-row">
+              <div class="profile-avatar">A</div>
+              <div>
+                <p class="profile-avatar-hint">Avatar generado automáticamente a partir de tu nombre</p>
+                <button class="btn btn-ghost" style="font-size:0.75rem;padding:8px 16px">Cambiar avatar</button>
+              </div>
+            </div>
+            <div class="config-fields">
+              <div class="field">
+                <label>Nombre de usuario</label>
+                <input type="text" value="aventurero_arcana" placeholder="Tu nombre de usuario">
+              </div>
+              <div class="field">
+                <label>Nombre completo</label>
+                <input type="text" placeholder="Nombre y apellidos">
+              </div>
+              <div class="field">
+                <label>Correo electrónico</label>
+                <input type="email" value="usuario@ejemplo.com">
+              </div>
+              <div class="field">
+                <label>Sobre mí</label>
+                <textarea rows="3" placeholder="Cuéntanos quién eres y qué te apasiona de la fantasía…"></textarea>
+              </div>
+            </div>
+            <button class="btn btn-primary config-save" onclick="configSave(this)">Guardar cambios</button>
+          </div>
+        </div>
+
+        <!-- Tab: Lectura -->
+        <div id="config-tab-lectura" class="config-tab">
+          <div class="config-section">
+            <h3 class="config-section-title">Preferencias de lectura</h3>
+            <div class="config-fields">
+              <div class="config-option-row">
+                <div>
+                  <strong>Tamaño de fuente</strong>
+                  <p>Ajusta el tamaño del texto en los artículos</p>
+                </div>
+                <div class="font-size-control">
+                  <button class="font-btn" onclick="adjustFont(-1)">A−</button>
+                  <span id="fontSizeVal">16px</span>
+                  <button class="font-btn" onclick="adjustFont(1)">A+</button>
+                </div>
+              </div>
+              <div class="config-option-row">
+                <div>
+                  <strong>Fuente del artículo</strong>
+                  <p>Elige entre serifada o sin serifa</p>
+                </div>
+                <div class="toggle-group">
+                  <button class="toggle-opt active" onclick="setFontType('serif',this)">Serif</button>
+                  <button class="toggle-opt" onclick="setFontType('sans',this)">Sans</button>
+                </div>
+              </div>
+              <div class="config-option-row">
+                <div>
+                  <strong>Mostrar tiempo de lectura</strong>
+                  <p>Indica cuántos minutos lleva cada artículo</p>
+                </div>
+                <label class="switch-label">
+                  <input type="checkbox" class="switch-input" checked onchange="this.closest('.switch-label').classList.toggle('on',this.checked)">
+                  <span class="switch-track"><span class="switch-thumb"></span></span>
+                </label>
+              </div>
+              <div class="config-option-row">
+                <div>
+                  <strong>Guardar posición de lectura</strong>
+                  <p>Continúa donde lo dejaste</p>
+                </div>
+                <label class="switch-label on">
+                  <input type="checkbox" class="switch-input" checked onchange="this.closest('.switch-label').classList.toggle('on',this.checked)">
+                  <span class="switch-track"><span class="switch-thumb"></span></span>
+                </label>
+              </div>
+              <div class="config-option-row">
+                <div>
+                  <strong>Vista por defecto en publicaciones</strong>
+                  <p>Cuadrícula o lista al entrar a Publicaciones</p>
+                </div>
+                <div class="toggle-group">
+                  <button class="toggle-opt active" onclick="setViewType('grid',this)">⊞ Grid</button>
+                  <button class="toggle-opt" onclick="setViewType('list',this)">☰ Lista</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab: Notificaciones -->
+        <div id="config-tab-notificaciones" class="config-tab">
+          <div class="config-section">
+            <h3 class="config-section-title">Notificaciones</h3>
+            <div class="config-fields">
+              <div class="config-option-row">
+                <div>
+                  <strong>Nuevos artículos</strong>
+                  <p>Recibe un aviso cuando se publique contenido nuevo</p>
+                </div>
+                <label class="switch-label on">
+                  <input type="checkbox" class="switch-input" checked onchange="this.closest('.switch-label').classList.toggle('on',this.checked)">
+                  <span class="switch-track"><span class="switch-thumb"></span></span>
+                </label>
+              </div>
+              <div class="config-option-row">
+                <div>
+                  <strong>Autores que sigues</strong>
+                  <p>Notificación cuando un autor seguido publique</p>
+                </div>
+                <label class="switch-label on">
+                  <input type="checkbox" class="switch-input" checked onchange="this.closest('.switch-label').classList.toggle('on',this.checked)">
+                  <span class="switch-track"><span class="switch-thumb"></span></span>
+                </label>
+              </div>
+              <div class="config-option-row">
+                <div>
+                  <strong>Etiquetas seguidas</strong>
+                  <p>Cuando se publique con tus etiquetas favoritas</p>
+                </div>
+                <label class="switch-label">
+                  <input type="checkbox" class="switch-input" onchange="this.closest('.switch-label').classList.toggle('on',this.checked)">
+                  <span class="switch-track"><span class="switch-thumb"></span></span>
+                </label>
+              </div>
+              <div class="config-option-row">
+                <div>
+                  <strong>Convocatorias y talleres</strong>
+                  <p>Alertas sobre iniciativas y eventos de la comunidad</p>
+                </div>
+                <label class="switch-label on">
+                  <input type="checkbox" class="switch-input" checked onchange="this.closest('.switch-label').classList.toggle('on',this.checked)">
+                  <span class="switch-track"><span class="switch-thumb"></span></span>
+                </label>
+              </div>
+              <div class="config-option-row">
+                <div>
+                  <strong>Respuestas y menciones</strong>
+                  <p>Cuando alguien responda a tus comentarios</p>
+                </div>
+                <label class="switch-label">
+                  <input type="checkbox" class="switch-input" onchange="this.closest('.switch-label').classList.toggle('on',this.checked)">
+                  <span class="switch-track"><span class="switch-thumb"></span></span>
+                </label>
+              </div>
+            </div>
+            <button class="btn btn-primary config-save" onclick="configSave(this)">Guardar preferencias</button>
+          </div>
+        </div>
+
+        <!-- Tab: Privacidad -->
+        <div id="config-tab-privacidad" class="config-tab">
+          <div class="config-section">
+            <h3 class="config-section-title">Privacidad y datos</h3>
+            <div class="config-fields">
+              <div class="config-option-row">
+                <div>
+                  <strong>Perfil público</strong>
+                  <p>Permite que otros usuarios vean tu perfil y publicaciones</p>
+                </div>
+                <label class="switch-label on">
+                  <input type="checkbox" class="switch-input" checked onchange="this.closest('.switch-label').classList.toggle('on',this.checked)">
+                  <span class="switch-track"><span class="switch-thumb"></span></span>
+                </label>
+              </div>
+              <div class="config-option-row">
+                <div>
+                  <strong>Historial de lectura visible</strong>
+                  <p>Muestra a otros qué artículos has leído</p>
+                </div>
+                <label class="switch-label">
+                  <input type="checkbox" class="switch-input" onchange="this.closest('.switch-label').classList.toggle('on',this.checked)">
+                  <span class="switch-track"><span class="switch-thumb"></span></span>
+                </label>
+              </div>
+              <div class="config-option-row">
+                <div>
+                  <strong>Análisis de comportamiento</strong>
+                  <p>Ayúdanos a mejorar la experiencia compartiendo datos anónimos</p>
+                </div>
+                <label class="switch-label on">
+                  <input type="checkbox" class="switch-input" checked onchange="this.closest('.switch-label').classList.toggle('on',this.checked)">
+                  <span class="switch-track"><span class="switch-thumb"></span></span>
+                </label>
+              </div>
+            </div>
+            <div class="config-danger-zone">
+              <h4>Zona de peligro</h4>
+              <button class="btn btn-danger">Eliminar historial de lectura</button>
+              <button class="btn btn-danger">Descargar mis datos</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab: Cuenta -->
+        <div id="config-tab-cuenta" class="config-tab">
+          <div class="config-section">
+            <h3 class="config-section-title">Seguridad</h3>
+            <div class="config-fields">
+              <div class="field">
+                <label>Contraseña actual</label>
+                <input type="password" placeholder="••••••••">
+              </div>
+              <div class="field">
+                <label>Nueva contraseña</label>
+                <input type="password" placeholder="Nueva contraseña">
+              </div>
+              <div class="field">
+                <label>Confirmar contraseña</label>
+                <input type="password" placeholder="Repite la contraseña">
+              </div>
+            </div>
+            <button class="btn btn-primary config-save" onclick="configSave(this)">Cambiar contraseña</button>
+
+            <div class="config-section" style="margin-top:40px; padding-top:32px; border-top: 1px solid var(--color-border)">
+              <h3 class="config-section-title" style="color:var(--color-error-text)">Zona de peligro</h3>
+              <p style="font-family:var(--font-serif);color:var(--color-text-muted);margin:0 0 16px">Estas acciones son irreversibles. Procede con precaución.</p>
+              <div style="display:flex;gap:12px;flex-wrap:wrap">
+                <button class="btn btn-danger">Desactivar cuenta</button>
+                <button class="btn btn-danger" style="background:rgba(180,60,60,0.15)">Eliminar cuenta permanentemente</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div><!-- /page-config -->
+
+  <!-- scroll to top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Volver al inicio">↑</button>
+
+  <script src="revista.js"></script>
+  <script src="arcana-pages.js"></script>
+</body>
+</html>
