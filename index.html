@@ -42,7 +42,12 @@
       </ul>
       <div class="nav-actions">
         <button class="nav-search-btn" id="searchToggle" aria-label="Buscar">⌕</button>
-        <button class="nav-icon-btn" onclick="showPage('usuario')" aria-label="Usuario">👤</button>
+        <button class="nav-icon-btn" onclick="showPage('usuario')" aria-label="Usuario">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+        </button>
         <button class="nav-icon-btn" onclick="showPage('config')" aria-label="Configuración">⚙</button>
         <a href="#" class="btn btn-primary nav-cta" onclick="showPage('suscripciones')">Suscribirse</a>
       </div>
