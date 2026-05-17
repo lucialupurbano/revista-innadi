@@ -2601,6 +2601,157 @@ input:focus, select:focus, textarea:focus {
 }
 
 /* ══════════════════════════════
+   PÁGINA: USUARIO
+══════════════════════════════ */
+.usuario-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 40px;
+  padding: 48px 0 80px;
+  align-items: start;
+}
+
+.usuario-sidebar {
+  position: sticky;
+  top: calc(var(--nav-h) + 24px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.usuario-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.usuario-card .profile-avatar-row {
+  margin-bottom: 0;
+}
+
+.usuario-bio p {
+  font-family: var(--font-serif);
+  font-size: 0.92rem;
+  color: var(--color-text-soft);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.usuario-stats {
+  display: flex;
+  gap: 24px;
+  border-top: 1px solid var(--color-border);
+  padding-top: 20px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.stat-item strong {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--color-accent);
+}
+
+.stat-item span {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+
+.usuario-fav-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.mini-tag {
+  display: inline-flex;
+  padding: 4px 12px;
+  background: var(--color-accent-dim);
+  border: 1px solid var(--color-border-gold);
+  border-radius: 999px;
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-accent);
+}
+
+.usuario-main {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.usuario-tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0;
+}
+
+.usuario-tab {
+  padding: 12px 24px;
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.usuario-tab:hover {
+  color: var(--color-text-soft);
+}
+
+.usuario-tab.active {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+}
+
+.usuario-tab-content {
+  display: none;
+}
+
+.usuario-tab-content.active {
+  display: block;
+}
+
+.usuario-tab-content .articles-grid {
+  gap: 16px;
+}
+
+.usuario-empty {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.usuario-empty p {
+  font-family: var(--font-serif);
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  margin: 16px 0 0;
+}
+
+/* ══════════════════════════════
    BOTÓN SCROLL TOP
 ══════════════════════════════ */
 .scroll-top {
@@ -2705,6 +2856,10 @@ input:focus, select:focus, textarea:focus {
 
   .hero-title { font-size: clamp(2.8rem, 12vw, 5rem); }
   .scroll-top { bottom: 20px; right: 20px; }
+
+  .usuario-layout { grid-template-columns: 1fr; }
+  .usuario-sidebar { position: static; }
+  .usuario-stats { justify-content: center; }
 }
 
 @media (max-width: 480px) {
